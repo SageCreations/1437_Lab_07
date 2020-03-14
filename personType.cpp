@@ -1,5 +1,12 @@
+/*
+ *
+ *  Edited by Edward Cruz on 03/13/2020
+ *  Lab_07 --- personType.cpp 
+ *  ** starter file from professor **
+ *  
+*/
 
-#include "personType.h"
+#include "personType.hpp"
 #include <iostream>
 #include <string>
 

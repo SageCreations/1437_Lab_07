@@ -1,5 +1,13 @@
-#ifndef H_personType
-#define H_personType
+/*
+ *
+ *  Edited by Edward Cruz on 03/13/2020
+ *  Lab_07 --- personType.hpp 
+ *  ** starter file from professor **
+ *  
+*/
+
+#ifndef HPP_personType
+#define HPP_personType
 
 #include <string>
 
@@ -32,7 +40,7 @@ class personType {
     //The default values of the parameters are empty strings.
     //Postcondition: firstName = first; lastName = last
 
-   private:
+   protected:
     string firstName;  //variable to store the first name
     string lastName;   //variable to store the last name
     int age;
