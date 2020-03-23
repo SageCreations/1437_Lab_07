@@ -24,6 +24,14 @@ billType::billType(std::string p, double mc, double dc, double rc) {
     roomCost     = rc;
 } //*******************************************************
 
+//*************** FUNCTIONS *******************************
+void billType::display() {
+    std::cout << "\n\nPatient's ID  : " << patient_ID;
+    std::cout << "\nMedicine Costs: " << medicineCost;
+    std::cout << "\nDoctor Costs  : " << doctorCost;
+    std::cout << "\nRoom Costs    : " << roomCost;
+} //*******************************************************
+
 //**************** MUTATORS *******************************
 void billType::SET_PatientID(std::string x) {
     patient_ID = x;

@@ -21,6 +21,11 @@ void personType::setName(string first, string last) {
     lastName = last;
 }
 
+// I added this mutator
+void personType::setAge(int a) {
+    age = a;
+}
+
 string personType::getFirstName() const {
     return firstName;
 }

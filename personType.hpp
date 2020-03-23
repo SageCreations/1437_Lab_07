@@ -24,6 +24,9 @@ class personType {
     //to the parameters.
     //Postcondition: firstName = first; lastName = last
 
+    void setAge(int a);
+    // I add this mutator
+
     string getFirstName() const;
     //Function to return the first name.
     //Postcondition: The value of the data member firstName

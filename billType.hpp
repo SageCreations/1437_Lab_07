@@ -15,6 +15,9 @@ class billType {
     billType();
     // Copy Constructor
     billType(std::string, double, double, double);
+
+    // functions
+    void display();
     
     // Mutators
     void SET_PatientID(std::string);
@@ -31,9 +34,9 @@ class billType {
    private:
     // Data members
     std::string patient_ID;
-    double medicineCost;
-    double doctorCost;
-    double roomCost;
+    double      medicineCost;
+    double      doctorCost;
+    double      roomCost;
 };
 
 #endif
