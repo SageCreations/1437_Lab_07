@@ -3,15 +3,17 @@
  *  Edited by Edward Cruz on 03/13/2020
  *  Lab_07 --- personType.hpp 
  *  ** starter file from professor **
- *  
+ *
+ *   ** I merged the .cpp file at the bottom of this file because it wouldn't 
+ *      stop giving me 'redefinition' errors.
+ *   
 */
 
-#ifndef HPP_personType
-#define HPP_personType
+#ifndef PERSONTYPE_HPP
+#define PERSONTYPE_HPP
 
+#include <iostream>
 #include <string>
-
-using namespace std;
 
 class personType {
    public:
@@ -19,7 +21,7 @@ class personType {
     //Function to output the first name and last name
     //in the form firstName lastName.
 
-    void setName(string first, string last);
+    void setName(std::string first, std::string last);
     //Function to set firstName and lastName according
     //to the parameters.
     //Postcondition: firstName = first; lastName = last
@@ -27,26 +29,65 @@ class personType {
     void setAge(int a);
     // I add this mutator
 
-    string getFirstName() const;
+    std::string getFirstName() const;
     //Function to return the first name.
     //Postcondition: The value of the data member firstName
     //               is returned.
 
-    string getLastName() const;
+    std::string getLastName() const;
     //Function to return the last name.
     //Postcondition: The value of the data member lastName
     //               is returned.
 
-    personType(string first = "", string last = "", int age = 0);
+    //I added this constructor
+    personType();
+
+    personType(std::string first, std::string last, int age);
     //constructor
     //Sets firstName and lastName according to the parameters.
     //The default values of the parameters are empty strings.
     //Postcondition: firstName = first; lastName = last
 
    protected:
-    string firstName;  //variable to store the first name
-    string lastName;   //variable to store the last name
+    std::string firstName;  //variable to store the first name
+    std::string lastName;   //variable to store the last name
     int age;
 };
+
+//i made this constructor
+personType::personType() {
+    firstName = "NULL";
+    lastName  = "NULL";
+    age       = -1;
+}
+
+//constructor
+personType::personType(std::string first, std::string last, int a) { 
+    firstName = first;
+    lastName = last;
+    age = a;
+}
+
+void personType::print() const {
+    std::cout << firstName << " " << lastName;
+}
+
+void personType::setName(std::string first, std::string last) {
+    firstName = first;
+    lastName = last;
+}
+
+// I added this mutator
+void personType::setAge(int a) {
+    age = a;
+}
+
+std::string personType::getFirstName() const {
+    return firstName;
+}
+
+std::string personType::getLastName() const {
+    return lastName;
+}
 
 #endif

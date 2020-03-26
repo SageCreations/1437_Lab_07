@@ -62,6 +62,3 @@ void doctorType::SET_Specialty(std::string s) {
 std::string doctorType::GET_Specialty() const {
     return specialty;
 } //*******************************************************
-
-
-
